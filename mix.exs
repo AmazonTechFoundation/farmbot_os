@@ -96,7 +96,9 @@ defmodule Farmbot.Mixfile do
 
   defp deps do
     [
-      {:nerves, "~> 1.1", runtime: false},
+      # {:nerves, "~> 1.1", runtime: false},
+      {:nerves, github: "nerves-project/nerves", branch: "distillery-2", runtime: false, override: true},
+      {:distillery, "~> 2.0"},
       {:elixir_make, "~> 0.4.2", runtime: false},
       {:gen_stage, "~> 0.14.0"},
       {:phoenix_html, "~> 2.11"},
@@ -141,7 +143,8 @@ defmodule Farmbot.Mixfile do
   defp deps(target) do
     system(target) ++
       [
-        {:shoehorn, "~> 0.3", except: :test},
+        # {:shoehorn, "~> 0.3", except: :test},
+        {:shoehorn, github: "nerves-project/shoehorn", branch: "distillery-2", except: :test, override: true},
         {:nerves_runtime, "~> 0.6.1"},
         {:nerves_firmware, "~> 0.4"},
         {:nerves_firmware_ssh, "~> 0.3.3"},
