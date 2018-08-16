@@ -98,7 +98,6 @@ defmodule Farmbot.Mixfile do
     [
       # {:nerves, "~> 1.1", runtime: false},
       {:nerves, github: "nerves-project/nerves", branch: "distillery-2", runtime: false, override: true},
-      {:distillery, "~> 2.0"},
       {:elixir_make, "~> 0.4.2", runtime: false},
       {:gen_stage, "~> 0.14.0"},
       {:phoenix_html, "~> 2.11"},
